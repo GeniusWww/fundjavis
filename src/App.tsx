@@ -455,9 +455,9 @@ ${alipayCount > 0 ? `- 支付宝导入: ${alipayCount} 只` : ''}
     setAiLoading(true);
 
     setTimeout(() => {
-      const growth = 'growth' in fund ? fund.growth : 0;
-      const nav = 'nav' in fund ? fund.nav : 0;
-      const estimate = 'estimate' in fund ? fund.estimate : nav;
+      const growth = ('growth' in fund ? fund.growth : 0) ?? 0;
+      const nav = ('nav' in fund ? fund.nav : 0) ?? 0;
+      const estimate = ('estimate' in fund ? fund.estimate : nav) ?? nav;
       const hasAlipay = 'alipayNav' in fund && fund.alipayNav;
       
       setAiContent(`
@@ -577,3 +577,4 @@ ${growth >= 0
 }
 
 export default App;
+
