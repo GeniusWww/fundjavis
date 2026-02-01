@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, TrendingUp, TrendingDown, User, Building, Calendar, Scale, Award, AlertTriangle, PieChart, LineChart, BarChart3, Target, Layers } from 'lucide-react';
+import { X, TrendingUp, TrendingDown, User, Building, Calendar, Scale, Award, AlertTriangle, PieChart, LineChart, Target, Layers } from 'lucide-react';
 import type { FundDetail } from '../types';
 import { getFundDetail } from '../services/fundApi';
 
@@ -477,3 +477,4 @@ export const FundDetailModal: React.FC<FundDetailModalProps> = ({
 };
 
 export default FundDetailModal;
+
